@@ -1,0 +1,15 @@
+@import "../../../styles/constants.scss";
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+
+    span {
+        font-size: 1.5rem;
+        color: $white;
+        font-weight: 900;
+        margin-left: $spacing-sm;
+    }
+}

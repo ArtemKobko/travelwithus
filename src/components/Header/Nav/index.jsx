@@ -16,7 +16,7 @@ function Nav({ isMenu, menuToggle }) {
     <nav className={isMenu ? classes.menu__nav : classes.nav}>
       <ul onClick={menuToggle}>
         <li>
-          <Link to="/new-tours">Summer 2023</Link>
+          <Link to="/destinations">Destinations</Link>
         </li>
         <li>
           <Link to="/pricing">Pricing</Link>

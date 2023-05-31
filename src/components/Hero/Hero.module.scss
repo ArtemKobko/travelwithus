@@ -1,0 +1,70 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixins.scss";
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  &__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  &__content {
+    background: rgba($dark, 0.4);
+    backdrop-filter: blur(2px);
+    padding: $spacing-lg;
+    border-radius: $borderRadius;
+    text-align: center;
+    width: 800px;
+
+    @include breakpoint(md-only) {
+        width: 80%;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $light;
+        font-style: italic;
+        margin-bottom: $spacing-md;
+
+        @include breakpoint(sm) {
+            font-size: 1.8rem;
+        }
+        @include breakpoint(md) {
+            font-size: 2rem;
+        }
+    }
+
+    &__tagline {
+        color: $light;
+        width: 100%;
+        font-style: italic;
+        font-size: 1.3rem;
+        margin-bottom: $spacing-lg;
+
+        @include breakpoint(sm) {
+            font-size: 1.1rem;
+        }
+        @include breakpoint(md) {
+            width: 60%;
+            margin: 0 auto $spacing-lg auto;
+        }
+    }
+    
+     @include button($light1,$dark, transparent);
+    
+}
+}

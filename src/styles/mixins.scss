@@ -8,20 +8,42 @@
             @content;
         }
     } @else if $point == md {
-        @media (min-width: 788px) {
+        @media (min-width: 815px) {
             @content;
         }
     } @else if $point == md-only {
-        @media (max-width: 787px) {
+        @media (max-width: 814px) {
             @content;
         }
     } @else if $point == sm {
-        @media (min-width: 37.5em) {
+        @media (min-width: 600px) {
             @content;
         }
     } @else if $point == sm-only {
         @media (max-width: 599px) {
             @content;
+        }
+    }
+}
+
+@mixin button ($color,$color1,$bg){
+    &__button {
+        cursor: pointer;
+        border: 1px solid $color;
+        outline: none;
+        border-radius: 12px;
+        padding: $spacing-sm $spacing-lg;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 1.1rem;
+        background: $bg;
+        color: $color;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $color1;
+            background: $color;
+            border: 1px solid $color1;
         }
     }
 }

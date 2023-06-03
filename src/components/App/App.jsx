@@ -6,6 +6,7 @@ import Destinations from '../../pages/Destinations';
 import Pricing from '../../pages/Pricing';
 import AboutUs from '../../pages/AboutUs';
 import BookNow from '../../pages/BookNow';
+import Footer from '../Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/book-now" element={<BookNow />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

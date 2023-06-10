@@ -62,8 +62,10 @@
     flex-direction: column;
     text-align: center;
     font-size: 1.4rem;
-
-    @include button($dark,$light1,$light1);
+    
+    &__button {
+        @include button($dark,$light1,$light1,1.1rem);
+    }
 
     ul {
         list-style-type: none;

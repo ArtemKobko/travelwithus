@@ -63,8 +63,9 @@
             margin: 0 auto $spacing-lg auto;
         }
     }
-    
-     @include button($light1,$dark, transparent);
-    
+
+    &__button{
+         @include button($light1,$dark, transparent, 1.1rem);
+    }    
 }
 }

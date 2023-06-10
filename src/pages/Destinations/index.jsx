@@ -1,8 +1,9 @@
 import React from 'react';
+import Locations from '../../components/Locations';
 
 function Destinations() {
   return (
-    <div>Destinations</div>
+    <Locations destinationsPage />
   );
 }
 

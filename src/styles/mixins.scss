@@ -26,8 +26,8 @@
     }
 }
 
-@mixin button ($color,$color1,$bg){
-    &__button {
+
+@mixin button ($color,$color1,$bg,$size){
         cursor: pointer;
         border: 1px solid $color;
         outline: none;
@@ -35,7 +35,7 @@
         padding: $spacing-sm $spacing-lg;
         font-family: inherit;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: $size;
         background: $bg;
         color: $color;
         transition: all 0.3s ease;
@@ -45,5 +45,4 @@
             background: $color;
             border: 1px solid $color1;
         }
-    }
 }

@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 
-.destinations {
+.locations {
     width: 100%;
     padding: 100px 0;
     display: flex;
@@ -40,31 +40,30 @@
             }
         }
 
-        &__locations {
+        &__countries,
+        &__countriesHP {
             display: grid;
             grid-template-columns: 1fr;
-            grid-auto-rows: 275px;
+            grid-auto-rows: 470px;
             gap: $spacing-md;
             margin-bottom: $spacing-xl;
 
             @include breakpoint(sm) {
                 grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 250px;
             }
 
             @include breakpoint(lg) {
                 grid-template-columns: repeat(3, 1fr);
-            }
+            }  
 
-            .locations__item {
-                cursor: pointer;
+            .country {
                 position: relative;
                 border-radius: $borderRadius;
                 border: 2px solid $white;
                 transition: 0.3s ease all;
                 box-shadow: $boxShadow;
-
-
+                
+                
                 &__img {
                     border-top-left-radius: $borderRadius;
                     border-top-right-radius: $borderRadius;
@@ -72,9 +71,14 @@
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 75%;
+                    height: 55%;
                     object-fit: cover;
+
+                    @include breakpoint(sm) {
+                       height: 50%;
+                    }      
                 }
+
                 .overlay {
                     border-top-left-radius: $borderRadius;
                     border-top-right-radius: $borderRadius;
@@ -82,7 +86,7 @@
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 75%;
+                    height: 55%;
                     background: rgba($dark, 0.3);
                     transition: 0.3s ease all;
 
@@ -90,18 +94,36 @@
                         background: transparent;
                     }
                 }
+
                 &__content {
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     width: 100%;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    height: 25%;
+                    height: 45%;
                     background: $white;
+                    padding: 15px;
                     border-bottom-left-radius: $borderRadius;
                     border-bottom-right-radius: $borderRadius;
+                    
+                    @include breakpoint(sm) {
+                        height: 50%;
+                     }
+
+                    &__line {
+                        border: 0.3px solid $light;
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+
+                    &__description {
+                        margin-bottom: 5px;
+                        font-size: 1rem;
+                    }
 
                     svg {
                         color: $aqua;
@@ -109,9 +131,38 @@
                     }
 
                     &__location {
-                        margin-left: 6px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 7px 0;
                         font-size: 1.2rem;
                         color: $dark;
+
+                        @include breakpoint(sm) {
+                            font-size: 1rem;
+                         }
+                         @include breakpoint(sm-only) {
+                           font-size: 1rem;
+                         }
+                        p {
+                            font-style: italic;
+                        }
+                    }
+                    &__button {
+                       @include button($white, $dark, $dark, 1rem);
+                       margin-top: 10px;
+                       padding: 5px;
+                       width: 100%;
+                       
+                       @include breakpoint(sm) {
+                        padding: 10px;
+                     }
+
+                     @include breakpoint(sm-only) {
+                        margin-top: 5px;
+                        padding: 12px;
+                     }
                     }
                 }
 
@@ -125,7 +176,38 @@
                     font-size: 0.8rem;
                 }
             }
-        }
+        }  
+        &__countriesHP {
+            grid-auto-rows: 275px;
+            
+            @include breakpoint(sm) {
+              grid-template-columns: repeat(2, 1fr);
+              grid-auto-rows: 250px;
+            }
+            
+            @include breakpoint(lg) {
+                grid-template-columns: repeat(3, 1fr);
+            }  
+            
+            .country {
+                .overlay {
+                    height: 75%;
+                }
+
+                &__img {
+                    height: 75%;
+                }
+
+                &__content{
+                    height: 25%;
+
+                    &__location {
+                      width: auto;
+                    }
+                }
+            }
+          }
+
 
         &__viewmore {
             display: flex;
@@ -133,11 +215,8 @@
             align-items: center;
 
             a {
-                padding: $spacing-sm $spacing-md;
                 text-decoration: none;
-                border-radius: $borderRadius;
                 color: $dark;
-                transition: 0.3s ease all;
                 display: flex;
                 align-items: center;
                 font-size: 1.1rem;

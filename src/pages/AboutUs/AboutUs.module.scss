@@ -1,0 +1,88 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    background-color: $white;
+
+    .hero {
+        background-image: url('../../assets/about-us.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: calc(300px + 30vw);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        @include breakpoint(md-only) {
+            height:calc(250px + 20vw)
+        }
+        @include breakpoint(sm-only) {
+             background-image: url('../../assets/about-us-small.jpg');
+            height:calc(300px + 20vw)
+        }
+        &__title {       
+            padding-top: calc(2rem + 10vw);
+            font-size: calc(2rem + 5vw);
+            color: $white;
+            opacity: 0.85;
+        }
+    }
+
+    .article {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        padding: 25px;
+
+        &__title{
+            @include title;
+        }
+
+        p {
+            text-indent: 20px; 
+           }
+    }
+    .proposal{
+        
+        &__title{
+            @include title;
+        }
+
+        .offers {
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0, 30px;
+            flex-wrap: wrap;
+
+            &__item {
+                text-align: center;
+                @include breakpoint(md){
+                    width: 20%;
+                    &:not(:last-child) {
+                        border-right: 0.5px solid $light1;
+                        padding-right: 50px;
+                    }
+                    &:last-child {
+                        width: 15%;
+                    }
+                }
+                @include breakpoint(md-only) {
+                    width: 40%;
+                    margin-bottom: 30px;
+                }
+                @include breakpoint(sm-only) {
+                    width: 80%;
+                }
+
+                &__image {
+                    width: 100px;
+                    margin-bottom: 10px;
+                }   
+                
+            }   
+
+        }
+    }
+}

@@ -26,7 +26,6 @@
     }
 }
 
-
 @mixin button ($color,$color1,$bg,$size){
         cursor: pointer;
         border: 1px solid $color;
@@ -45,4 +44,14 @@
             background: $color;
             border: 1px solid $color1;
         }
+}
+
+@mixin title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: $dark;
+    @include breakpoint(sm-only){
+        font-size: 2rem;
+    }
 }

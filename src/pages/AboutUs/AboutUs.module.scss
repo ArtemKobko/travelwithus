@@ -2,7 +2,7 @@
 @import "../../styles/mixins.scss";
 
 .container {
-    background-color: $white;
+    background-color: $light;
 
     .hero {
         background-image: url('../../assets/about-us.jpg');
@@ -14,10 +14,10 @@
         align-items: center;
         justify-content: center;
     
-        @include breakpoint(md-only) {
+        @include breakpoint(md-less) {
             height:calc(250px + 20vw)
         }
-        @include breakpoint(sm-only) {
+        @include breakpoint(sm-less) {
              background-image: url('../../assets/about-us-small.jpg');
             height:calc(300px + 20vw)
         }
@@ -68,11 +68,11 @@
                         width: 15%;
                     }
                 }
-                @include breakpoint(md-only) {
+                @include breakpoint(md-less) {
                     width: 40%;
                     margin-bottom: 30px;
                 }
-                @include breakpoint(sm-only) {
+                @include breakpoint(sm-less) {
                     width: 80%;
                 }
 

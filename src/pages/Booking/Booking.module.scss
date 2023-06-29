@@ -1,0 +1,103 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    background-color: $light;
+}
+
+.offers {
+    padding: 120px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+        @include breakpoint(lg) {
+            padding: 120px;
+        }
+
+    @include breakpoint(md-less) {
+       padding: 120px 50px;
+    }
+
+    &__message {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: calc(0.6rem + 0.8vw);
+        font-style: italic;
+        color: $dark;
+    }
+
+    .hotel {
+        position: relative;
+        background-color: $white;
+        border-radius: $borderRadius;
+        border: 2px solid $white;
+        transition: 0.3s ease all;
+        box-shadow: $boxShadow;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        @include breakpoint(md-less) {
+            flex-direction: column;
+        }
+
+        &__image {
+            border-top-left-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius;
+            width: 45%;
+
+            @include breakpoint(md-less) {
+               border-top-right-radius: $borderRadius;
+               border-bottom-left-radius: 0;
+               width: 100%;
+            }
+        }
+
+        &__information {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+
+            &__name {
+                font-size: calc(1rem + 1vw);
+            }
+
+            &__description {
+                font-size: calc(0.6rem + 0.8vw);
+                margin-bottom: 10px;
+            }
+
+            &__price {
+                font-size: calc(0.7rem + 1vw);
+                font-style: italic;
+
+            }
+
+            &__button {
+                @include button($white, $dark, $dark, 1rem);
+                margin-top: 10px;
+                padding: 15px;
+            }
+
+            &__location {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 7px 0;
+                font-size: calc(0.8rem + 1vw);
+                color: $dark;
+
+                svg {
+                    color: $aqua;
+                }
+
+                p {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

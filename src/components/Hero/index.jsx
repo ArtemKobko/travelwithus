@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { Context } from '../../hooks/context';
 import coverVideo from '../../assets/cover.mp4';
 import classes from './Hero.module.scss';
+import ColorSlider from '../MUI/Range';
+import SelectAutoWidth from '../MUI/Select';
 
 function Hero() {
+  const { setButtonPush } = useContext(Context);
+
   return (
     <div className={classes.hero}>
       <video
@@ -17,10 +23,13 @@ function Hero() {
         <h1 className={classes.hero__content__title}>
           Just travel with us
         </h1>
-        <p className={classes.hero__content__tagline}>
-          Travel is not reward for working it`s education for living
-        </p>
-        <button className={classes.hero__content__button} type="button">Find your journey</button>
+        <div className={classes.hero__content__inputs}>
+          <SelectAutoWidth />
+          <ColorSlider />
+        </div>
+        <Link to="/booking">
+          <button className={classes.hero__content__button} onClick={() => setButtonPush(true)} type="button">Find your journey</button>
+        </Link>
       </div>
     </div>
   );

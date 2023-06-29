@@ -1,9 +1,5 @@
 @mixin breakpoint($point) {
-    @if $point == xl {
-        @media (min-width: 1120px) {
-            @content;
-        }
-    } @else if $point == lg {
+    @if $point == lg {
         @media (min-width: 1024px) {
             @content;
         }
@@ -11,7 +7,7 @@
         @media (min-width: 815px) {
             @content;
         }
-    } @else if $point == md-only {
+    } @else if $point == md-less {
         @media (max-width: 814px) {
             @content;
         }
@@ -19,7 +15,7 @@
         @media (min-width: 600px) {
             @content;
         }
-    } @else if $point == sm-only {
+    } @else if $point == sm-less {
         @media (max-width: 599px) {
             @content;
         }
@@ -51,7 +47,7 @@
     text-align: center;
     margin-bottom: 30px;
     color: $dark;
-    @include breakpoint(sm-only){
+    @include breakpoint(sm-less){
         font-size: 2rem;
     }
 }

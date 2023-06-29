@@ -28,7 +28,7 @@
     text-align: center;
     width: 800px;
 
-    @include breakpoint(md-only) {
+    @include breakpoint(md-less) {
         width: 80%;
     }
 

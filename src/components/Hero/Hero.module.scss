@@ -28,9 +28,14 @@
     text-align: center;
     width: 800px;
 
-    @include breakpoint(md-only) {
+    @include breakpoint(md-less) {
         width: 80%;
     }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-around;
+  }  
 
     &__title {
         text-transform: uppercase;
@@ -48,24 +53,8 @@
         }
     }
 
-    &__tagline {
-        color: $light;
-        width: 100%;
-        font-style: italic;
-        font-size: 1.3rem;
-        margin-bottom: $spacing-lg;
-
-        @include breakpoint(sm) {
-            font-size: 1.1rem;
-        }
-        @include breakpoint(md) {
-            width: 60%;
-            margin: 0 auto $spacing-lg auto;
-        }
-    }
-
     &__button{
-         @include button($light1,$dark, transparent, 1.1rem);
+         @include button($light1,$dark, transparent, 1.3rem);
     }    
 }
 }

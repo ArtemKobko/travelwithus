@@ -9,7 +9,7 @@ function Nav({ isMenu, menuToggle }) {
     if (isMenu) {
       menuToggle();
     }
-    navigate('/book-now');
+    navigate('/booking');
   };
 
   return (
@@ -26,7 +26,7 @@ function Nav({ isMenu, menuToggle }) {
         </li>
       </ul>
       <button type="button" className={classes.menu__nav__button} onClick={booking}>
-        Book Now
+        Booking
       </button>
     </nav>
   );

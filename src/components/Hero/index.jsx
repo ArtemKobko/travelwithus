@@ -12,7 +12,7 @@ function Hero() {
   return (
     <div className={classes.hero}>
       <video
-        autoPlay
+        autoPlay={false}
         muted
         loop
         className={classes.hero__video}

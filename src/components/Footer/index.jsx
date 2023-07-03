@@ -1,8 +1,8 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import {
   FaYoutube, FaInstagram, FaTwitter, FaSnapchatGhost, FaFacebook,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './Footer.module.scss';
@@ -50,7 +50,7 @@ function Footer() {
           <ul className={classes.footer__bottom__socials}>
             {socials.map((icon, index) => (
               <li key={index + 1}>
-                <a href="/">{icon}</a>
+                <Link to="/">{icon}</Link>
               </li>
             ))}
           </ul>

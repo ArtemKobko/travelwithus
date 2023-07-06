@@ -27,18 +27,18 @@ function Footer() {
     }
   };
 
-  const changeEmail = (event) => {
-    setEmail(event.target.value);
+  const changeEmail = (e) => {
+    setEmail(e.target.value);
   };
   return (
-    <div className={classes.container}>
-      <footer className={classes.footer}>
+    <footer className={classes.container}>
+      <div className={classes.footer}>
         <div className={classes.footer__newsletter}>
           <h4 className={classes.footer__newsletter__headline}>
             Join our newsletter to receive exclusive travel rewards
           </h4>
-          <form className={classes.footer__newsletter__form} onSubmit={(e) => subscribe(e)}>
-            <input className={classes.footer__newsletter__form__input} type="email" placeholder="Your Email" value={email} onChange={(event) => changeEmail(event)} />
+          <form className={classes.footer__newsletter__form} onSubmit={subscribe}>
+            <input className={classes.footer__newsletter__form__input} type="email" placeholder="Your Email" value={email} onChange={changeEmail} />
             <button type="submit" className={classes.footer__newsletter__form__button}>Subscribe</button>
           </form>
         </div>
@@ -67,8 +67,8 @@ function Footer() {
             theme="colored"
           />
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 }
 

@@ -11,6 +11,7 @@ function Pricing() {
         autoPlay
         muted
         loop
+        playsInline
         className={classes.hero__video}
         id="video"
         src={coverVideo}

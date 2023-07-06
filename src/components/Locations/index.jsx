@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classes from './Locations.module.scss';
 import locationData from '../../utils/locationData';
-import { Context } from '../../hooks/context';
+import { Context } from '../../context';
 
 function Locations({ destinationsPage }) {
   const navigate = useNavigate();

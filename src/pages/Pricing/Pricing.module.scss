@@ -27,6 +27,7 @@
     border-radius: $borderRadius;
     text-align: center;
     width: 800px;
+    z-index: 10;
 
     @include breakpoint(md-less) {
         width: 80%;

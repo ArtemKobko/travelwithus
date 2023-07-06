@@ -7,7 +7,7 @@ import {
   Box,
 } from '@mui/material';
 import locationData from '../../utils/locationData';
-import { Context } from '../../hooks/context';
+import { Context } from '../../context';
 
 export default function SelectAutoWidth() {
   const { countryId, setCountryId } = useContext(Context);

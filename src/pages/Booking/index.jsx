@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { IoLocationOutline } from 'react-icons/io5';
-import { Context } from '../../hooks/context';
+import { Context } from '../../context';
 import classes from './Booking.module.scss';
 import locationData from '../../utils/locationData';
 import hotels from '../../utils/hotels';
@@ -13,9 +13,9 @@ function BookNow() {
   if (buttonPush) {
     return (
       <div className={classes.container}>
-        <div className={classes.offers}>
+        <div className={classes.hotels}>
           {fitToPrice ? (
-            <div className={classes.offers__message}>
+            <div className={classes.hotels__message}>
               For this destination prices starts from
               {' '}
               {country.price}

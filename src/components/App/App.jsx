@@ -7,7 +7,7 @@ import Pricing from '../../pages/Pricing';
 import AboutUs from '../../pages/AboutUs';
 import BookNow from '../../pages/Booking';
 import Footer from '../Footer';
-import { ContextProvider } from '../../hooks/context';
+import { ContextProvider } from '../../context';
 
 function App() {
   return (

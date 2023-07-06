@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Slider, Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Context } from '../../hooks/context';
+import { Context } from '../../context';
 
 const PrettoSlider = styled(Slider)({
   color: '#dbe6ed',

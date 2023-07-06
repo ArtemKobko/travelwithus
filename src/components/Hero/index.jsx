@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../../hooks/context';
+import { Context } from '../../context';
 import coverVideo from '../../assets/cover.mp4';
 import classes from './Hero.module.scss';
 import ColorSlider from '../MUI/Range';

@@ -17,7 +17,7 @@ export default function SelectAutoWidth() {
   };
 
   return (
-    <div>
+    <div data-testid="contry-selector">
       <FormControl sx={{ m: 1, minWidth: 80 }}>
         <InputLabel sx={{ color: '#dbe6ed', fontSize: 'calc(0.5em + 0.7vw)' }} id="demo-simple-select-autowidth-label">Country</InputLabel>
         <Select
@@ -38,7 +38,6 @@ export default function SelectAutoWidth() {
           { locationData.map(({ id, location }) => <MenuItem key={id} value={id}>{location}</MenuItem>)}
         </Select>
         <Box sx={{ m: 1 }} />
-
       </FormControl>
     </div>
   );

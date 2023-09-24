@@ -25,21 +25,25 @@ function AboutUs() {
           Join us at "Travel with Us" as we embark on a remarkable voyage together. Let us create a journey that will etch lifelong memories and ignite the spirit of adventure within you. Because with us, every step is a story waiting to be told.
         </p>
       </div>
-      <div className={classes.proposal}>
-        <h1 className={classes.proposal__title}>What we offer</h1>
-        <div className={classes.offers}>
-          {offersData.map(({
-            id, title, image, description,
-          }) => (
-            <div className={classes.offers__item} key={id}>
-              <img className={classes.offers__item__image} src={image} alt={title} />
-              <h2 className={classes.offers__item__title}>{title}</h2>
-              <p className={classes.offers__item__description}>{description}</p>
+      {
+        offersData.length > 0
+          ? (
+            <div className={classes.proposal}>
+              <h1 className={classes.proposal__title}>What we offer</h1>
+              <div className={classes.offers} data-testid="our-offers">
+                {offersData.map(({
+                  id, title, image, description,
+                }) => (
+                  <div className={classes.offers__item} key={id}>
+                    <img className={classes.offers__item__image} src={image} alt={title} />
+                    <h2 className={classes.offers__item__title}>{title}</h2>
+                    <p className={classes.offers__item__description}>{description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-
+          ) : null
+}
     </div>
   );
 }

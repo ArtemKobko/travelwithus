@@ -24,8 +24,9 @@ function Locations({ destinationsPage }) {
       <div className={classes.locations}>
         <div className={classes.locations__content}>
           <h2 className={classes.locations__content__title}>{ destinationsPage ? 'All destinations' : 'Most visited' }</h2>
-          <div className={destinationsPage
-            ? classes.locations__content__countries : classes.locations__content__countriesHP}
+          <div
+            className={destinationsPage ? classes.locations__content__countries : classes.locations__content__countriesHP}
+            data-testid="locations-data"
           >
             {mapData.map(({
               id, location, isSummer, img, price, description,
@@ -59,10 +60,9 @@ function Locations({ destinationsPage }) {
                         {description}
                       </p>
                       <div className={classes.country__content__line} />
-                      <button type="button" className={classes.country__content__button} onClick={() => booking(id, price)}>Book now</button>
+                      <button data-testid="book-now" type="button" className={classes.country__content__button} onClick={() => booking(id, price)}>Book Now</button>
                     </>
                   ) : null}
-
                 </div>
                 {isSummer && (
                 <p className={classes.country__tag}>Summer 2023</p>

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e8e8e8;
+}
+.logo span {
+  font-size: 1.5rem;
+  color: #e8e8e8;
+  font-weight: 900;
+  margin-left: 12px;
+}/*# sourceMappingURL=Logo.module.css.map */

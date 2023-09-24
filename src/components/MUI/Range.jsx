@@ -49,10 +49,11 @@ export default function CustomizedSlider() {
     setDesiredPrice(event.target.value);
   };
   return (
-    <Box sx={{ width: 250 }}>
+    <Box sx={{ width: 250 }} data-testid="slider">
       <Typography sx={{ color: '#dbe6ed', fontSize: 'calc(0.5em + 0.7vw)' }}>Max Price $</Typography>
       <Box sx={{ m: 1 }} />
       <PrettoSlider
+        d="range"
         onChange={handleChange}
         valueLabelDisplay="auto"
         defaultValue={700}

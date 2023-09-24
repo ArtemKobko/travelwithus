@@ -12,9 +12,9 @@ function Header() {
   };
 
   const menuToggle = !menuOpen ? (
-    <CgMenuRight onClick={handleMenuToggle} />
+    <CgMenuRight data-testid="open" onClick={handleMenuToggle} />
   ) : (
-    <CgClose onClick={handleMenuToggle} />
+    <CgClose data-testid="close" onClick={handleMenuToggle} />
   );
 
   return (

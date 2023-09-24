@@ -24,5 +24,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/no-array-index-key': 0,
     'max-len': 0,
+    'linebreak-style': 0,
   },
 };

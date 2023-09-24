@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+.header {
+  height: 90px;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: rgba(15, 21, 21, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+@media (min-width: 815px) {
+  .header {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 815px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__menu__toggle {
+  color: #f5fdfd;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.header__menu__toggle svg {
+  font-size: 2rem;
+}
+.header__menu__toggle:hover {
+  transform: scale(1.05);
+}
+.header__menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding: 3rem;
+  width: 70vw;
+  max-width: 400px;
+  height: 100vh;
+  outline: 0;
+  background: #0f1515;
+  z-index: 9;
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.header__menu .show {
+  transform: translateX(0vw);
+  opacity: 1;
+}/*# sourceMappingURL=Header.module.css.map */

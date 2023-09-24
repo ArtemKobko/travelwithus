@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+.container {
+  background-color: #dbe6ed;
+}
+
+.hotels {
+  padding: 120px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .hotels {
+    padding: 120px;
+  }
+}
+@media (max-width: 814px) {
+  .hotels {
+    padding: 120px 50px;
+  }
+}
+.hotels__message {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: calc(0.6rem + 0.8vw);
+  font-style: italic;
+  color: #0f1515;
+}
+.hotels .hotel {
+  position: relative;
+  background-color: #f5fdfd;
+  border-radius: 12px;
+  border: 2px solid #f5fdfd;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media (max-width: 814px) {
+  .hotels .hotel {
+    flex-direction: column;
+  }
+}
+.hotels .hotel__image {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  width: 45%;
+}
+@media (max-width: 814px) {
+  .hotels .hotel__image {
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    width: 100%;
+  }
+}
+.hotels .hotel__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+}
+.hotels .hotel__information__name {
+  font-size: calc(1rem + 1vw);
+}
+.hotels .hotel__information__description {
+  font-size: calc(0.6rem + 0.8vw);
+  margin-bottom: 10px;
+}
+.hotels .hotel__information__price {
+  font-size: calc(0.7rem + 1vw);
+  font-style: italic;
+}
+.hotels .hotel__information__button {
+  cursor: pointer;
+  border: 1px solid #f5fdfd;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  background: #0f1515;
+  color: #f5fdfd;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  padding: 15px;
+}
+.hotels .hotel__information__button:hover {
+  color: #0f1515;
+  background: #f5fdfd;
+  border: 1px solid #0f1515;
+}
+.hotels .hotel__information__location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 7px 0;
+  font-size: calc(0.8rem + 1vw);
+  color: #0f1515;
+}
+.hotels .hotel__information__location svg {
+  color: #229b91;
+}
+.hotels .hotel__information__location p {
+  font-style: italic;
+}/*# sourceMappingURL=Booking.module.css.map */

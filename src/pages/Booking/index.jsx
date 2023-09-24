@@ -25,7 +25,7 @@ function BookNow() {
           {hotels.map(({
             id, name, image, desription,
           }) => (
-            <div key={id} className={classes.hotel}>
+            <div key={id} className={classes.hotel} data-testid="hotel">
               <img src={image} alt={name} className={classes.hotel__image} />
               <div className={classes.hotel__information}>
                 <div>

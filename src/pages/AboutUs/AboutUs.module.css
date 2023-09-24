@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+.container {
+  background-color: #dbe6ed;
+}
+.container .hero {
+  background-image: url("../../assets/about-us.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(300px + 30vw);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 814px) {
+  .container .hero {
+    height: calc(250px + 20vw);
+  }
+}
+@media (max-width: 599px) {
+  .container .hero {
+    background-image: url("../../assets/about-us-small.jpg");
+    height: calc(300px + 20vw);
+  }
+}
+.container .hero__title {
+  padding-top: calc(2rem + 10vw);
+  font-size: calc(2rem + 5vw);
+  color: #f5fdfd;
+  opacity: 0.85;
+}
+.container .article {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  padding: 25px;
+}
+.container .article__title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f1515;
+}
+@media (max-width: 599px) {
+  .container .article__title {
+    font-size: 2rem;
+  }
+}
+.container .article p {
+  text-indent: 20px;
+}
+.container .proposal__title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f1515;
+}
+@media (max-width: 599px) {
+  .container .proposal__title {
+    font-size: 2rem;
+  }
+}
+.container .proposal .offers {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0, 30px;
+  flex-wrap: wrap;
+}
+.container .proposal .offers__item {
+  text-align: center;
+}
+@media (min-width: 815px) {
+  .container .proposal .offers__item {
+    width: 20%;
+  }
+  .container .proposal .offers__item:not(:last-child) {
+    border-right: 0.5px solid #e8e8e8;
+    padding-right: 50px;
+  }
+  .container .proposal .offers__item:last-child {
+    width: 15%;
+  }
+}
+@media (max-width: 814px) {
+  .container .proposal .offers__item {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .container .proposal .offers__item {
+    width: 80%;
+  }
+}
+.container .proposal .offers__item__image {
+  width: 100px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=AboutUs.module.css.map */

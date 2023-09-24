@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+.container {
+  background: #dbe6ed;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.locations {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.locations__content {
+  margin: 0 1.5rem;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+.locations__content__title {
+  color: #0f1515;
+  font-size: 2rem;
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 64px;
+}
+.locations__content__title::after {
+  content: "";
+  position: absolute;
+  display: inline;
+  top: 15px;
+  right: 0;
+  width: calc(100% - 265px);
+  height: 2px;
+  background: #0f1515;
+}
+.locations__content__countries, .locations__content__countriesHP {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 470px;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+@media (min-width: 600px) {
+  .locations__content__countries, .locations__content__countriesHP {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .locations__content__countries, .locations__content__countriesHP {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.locations__content__countries .country, .locations__content__countriesHP .country {
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid #f5fdfd;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+}
+.locations__content__countries .country__img, .locations__content__countriesHP .country__img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 600px) {
+  .locations__content__countries .country__img, .locations__content__countriesHP .country__img {
+    height: 50%;
+  }
+}
+.locations__content__countries .country .overlay, .locations__content__countriesHP .country .overlay {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: rgba(15, 21, 21, 0.2);
+  transition: 0.3s ease all;
+}
+.locations__content__countries .country .overlay:hover, .locations__content__countriesHP .country .overlay:hover {
+  background: transparent;
+}
+.locations__content__countries .country__content, .locations__content__countriesHP .country__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45%;
+  background: #f5fdfd;
+  padding: 15px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media (min-width: 600px) {
+  .locations__content__countries .country__content, .locations__content__countriesHP .country__content {
+    height: 50%;
+  }
+}
+.locations__content__countries .country__content__line, .locations__content__countriesHP .country__content__line {
+  border: 0.3px solid #dbe6ed;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.locations__content__countries .country__content__description, .locations__content__countriesHP .country__content__description {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+.locations__content__countries .country__content svg, .locations__content__countriesHP .country__content svg {
+  color: #229b91;
+  font-size: 1.1rem;
+}
+.locations__content__countries .country__content__location, .locations__content__countriesHP .country__content__location {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0;
+  font-size: 1.2rem;
+  color: #0f1515;
+}
+@media (min-width: 600px) {
+  .locations__content__countries .country__content__location, .locations__content__countriesHP .country__content__location {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 599px) {
+  .locations__content__countries .country__content__location, .locations__content__countriesHP .country__content__location {
+    font-size: 1rem;
+  }
+}
+.locations__content__countries .country__content__location p, .locations__content__countriesHP .country__content__location p {
+  font-style: italic;
+}
+.locations__content__countries .country__content__button, .locations__content__countriesHP .country__content__button {
+  cursor: pointer;
+  border: 1px solid #f5fdfd;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  background: #0f1515;
+  color: #f5fdfd;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+}
+.locations__content__countries .country__content__button:hover, .locations__content__countriesHP .country__content__button:hover {
+  color: #0f1515;
+  background: #f5fdfd;
+  border: 1px solid #0f1515;
+}
+@media (min-width: 600px) {
+  .locations__content__countries .country__content__button, .locations__content__countriesHP .country__content__button {
+    padding: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .locations__content__countries .country__content__button, .locations__content__countriesHP .country__content__button {
+    margin-top: 5px;
+    padding: 12px;
+  }
+}
+.locations__content__countries .country__tag, .locations__content__countriesHP .country__tag {
+  position: absolute;
+  background: #f5fdfd;
+  top: -12px;
+  left: 12px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+.locations__content__countriesHP {
+  grid-auto-rows: 275px;
+}
+@media (min-width: 600px) {
+  .locations__content__countriesHP {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .locations__content__countriesHP {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.locations__content__countriesHP .country .overlay {
+  height: 75%;
+}
+.locations__content__countriesHP .country__img {
+  height: 75%;
+}
+.locations__content__countriesHP .country__content {
+  height: 25%;
+}
+.locations__content__countriesHP .country__content__location {
+  width: auto;
+}
+.locations__content__viewmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.locations__content__viewmore a {
+  text-decoration: none;
+  color: #0f1515;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.locations__content__viewmore a svg {
+  font-size: 1.2rem;
+  margin-left: 12px;
+  padding-top: 2px;
+}/*# sourceMappingURL=Locations.module.css.map */
